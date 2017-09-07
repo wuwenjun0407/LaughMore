@@ -407,15 +407,18 @@ app.post('/publishimg',update.single('publishImg'),function (req,res) {
 
 //发表文章  如果用户点了上传图片，需要找上传图片时存到数据库中的文章，如果用户不点上传图片，则需要新建一个文章；
 app.post('/publisharticle',function (req,res) {
+    console.log(2);
     let article = req.body;
     let username = req.session.user.username;
     article.author = username;
 
     if(article._id){//有_id说明之前点了上传图片
         Type.findOne({name:article.type},function (err,type) {
+            console.log(1);
             if(err){
                 res.json({err});
             }else{
+                console.log(1);
                 article.type = type._id;
                 Article.update({_id:article._id},article,function (err,result) {
                     if(err){

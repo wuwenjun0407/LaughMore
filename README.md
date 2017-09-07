@@ -1,6 +1,5 @@
 # 基于React、React-Router4、React-Redux、React-Router-Redux+Node，Express，MongoDB的App(点赞，收藏，发表，评论...)
 
-- 本项目主要用来总结一段时间来学习的React各种知识；
 - 后台基于Node.js+Express+MongoDB构建服务端；
 
 ## 安装和运行程序
