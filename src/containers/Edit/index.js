@@ -34,7 +34,6 @@ class Edit extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.state,1);
         this.props.auth();
     }
 
